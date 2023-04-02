@@ -22,19 +22,21 @@ def rename():
 	# res = os.listdir(directory)
 	
 
-rename()
+# rename()
 
 def rename2():
 	for file in os.listdir(directory):
 		if file.endswith('.txt'):
 			newFile = f"new_{file}"
 
-
-			oldPath = os.path.join()
-			newPath = os.path.join()
+			oldPath = os.path.join(directory, file)
+			newPath = os.path.join(directory, newFile)
 
 			os.rename(oldPath, newPath)
 
 			print(f"Renamed {file} to {newFile}")
+
 rename2()
+
+
 
