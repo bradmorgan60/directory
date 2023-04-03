@@ -17,7 +17,7 @@ def move_to_downloads():
 
     shutil.move(path1, path2)
 
-move_to_downloads()
+# move_to_downloads()
 
 def move_from_downloads():
     file=input("Input file here: ")
@@ -25,7 +25,7 @@ def move_from_downloads():
     path1 = "/Users/bradmorgan60/OneDrive/Documents/bash/"
     path2 = f"/Users/bradmorgan60/downloads/{file}"
 
-    shutil.move(path1, path2)
+    shutil.move(path2, path1)
 
 move_from_downloads()
 

@@ -1,3 +1,6 @@
+
+#!/usr/bin/env python3
+
 import os
 import shutil
 import time
@@ -26,10 +29,11 @@ def rename():
 	# res = os.listdir(dest_directory)
 	
 # rename()
-import socket
-def rename_move():
+
+# Rename file and copy it to your downloads folder
+def rename_copy():
 	for file in os.listdir(dest_directory):
-		if file.endswith('.txt') | file.startswith('t'):
+		if file.endswith('.txt') | file.startswith('T'):
 			newFile = f"new_{file}"
 
 			oldPath = os.path.join(dest_directory, file)
@@ -39,14 +43,14 @@ def rename_move():
 
 			print(f"Renamed {file} to {newFile}")
 			
-			shutil.move(newPath, downloads)
+			shutil.copy(newPath, downloads)
 
-rename_move()
+# rename_move()
 
-# Use this function to move files from downloads to your current directory
-def rename_move2():
+# Use this function to copy text files from downloads to your current directory
+def rename_copy2():
 	for file in os.listdir(downloads):
-		if file.endswith('.txt') | file.startswith('t'):
+		if file.endswith('.txt') | file.startswith('T'):
 			newFile = f"{file}"
 
 			oldPath = os.path.join(downloads, file)
@@ -56,11 +60,10 @@ def rename_move2():
 
 			# print(f"Renamed {file} to {newFile}")
 			
-			shutil.move(newPath, dest_directory)
+			shutil.copy(newPath, dest_directory)
 			print(f"{file} has been moved...")
 
 rename_move2()
-
 
 
 def rename3():
