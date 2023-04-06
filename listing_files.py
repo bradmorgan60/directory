@@ -10,6 +10,6 @@ for my_files in my_dir:
     my_dest = "new" + str(i) + ".txt"
     my_source = cwd + my_dest
 
-    print(my_files)
+    print(my_dest)
 
 # print(my_dir)

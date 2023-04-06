@@ -4,12 +4,11 @@
 import os
 import shutil
 import time
-from turtle import down
-
 
 filesRename = ['text1.txt','text2.txt']
-downloads = "/Users/bradmorgan60/downloads"
+downloads = "/Users/bradmorgan60/Downloads/"
 dest_directory = os.getcwd()
+print(dest_directory)
 
 # Iterate
 def rename():
@@ -63,20 +62,23 @@ def rename_copy2():
 			shutil.copy(newPath, dest_directory)
 			print(f"{file} has been moved...")
 
-rename_move2()
+# rename_move2()
 
-
-def rename3():
-	for file in os.listdir(dest_directory):
-		if file.startswith('t'):
-			newFile = f"new_{file}"
+def move_file():
+	for file in os.listdir(downloads):
+		if file.endswith('.txt'):
 
 			oldPath = os.path.join(dest_directory, file)
-			newPath = os.path.join(dest_directory, newFile)
-
+			newPath = os.path.join(dest_directory, file)
+			
+			# # downloads = f"/Users/bradmorgan60/downloads/{file}"
 			os.rename(oldPath, newPath)
 
-			print(f"Renamed {file} to {newFile}")
+			# print(f"Renamed {file} to {newFile}")
+			shutil.copy(newPath, dest_directory)
+			print(f"{newPath} moved to current directory...")
 	
-# rename3()
+# move_file()
+
+# print(os.listdir(downloads))
 
