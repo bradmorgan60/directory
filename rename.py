@@ -8,7 +8,7 @@ import time
 filesRename = ['text1.txt','text2.txt']
 downloads = "/Users/bradmorgan60/Downloads/"
 dest_directory = os.getcwd()
-print(dest_directory)
+# print(dest_directory)
 
 # Iterate
 def rename():
@@ -78,7 +78,7 @@ def move_file():
 			shutil.copy(newPath, dest_directory)
 			print(f"{newPath} moved to current directory...")
 	
-# move_file()
+move_file()
 
 # print(os.listdir(downloads))
 
